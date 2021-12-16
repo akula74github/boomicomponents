@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/#BOOMI_PSO/Utilities/[UTILITY] ETL Load Testing" componentId="cff9387b-89c8-48ba-a818-cdf6d3fd5c40" version="1" name="[TEST] Contact Record FF" type="profile.flatfile" createdDate="2021-05-13T14:26:15Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2021-05-13T14:26:15Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="[UTILITY] ETL Load Testing" folderId="Rjo0MDE3ODgw" copiedFromComponentId="48260ec1-3793-44d3-be2e-f617a2235eb1" copiedFromComponentVersion="1">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <FlatFileProfile xmlns="" modelVersion="2" strict="true">
+      <ProfileProperties>
+        <GeneralInfo fileType="delimited" useColumnHeaders="false"/>
+        <Options>
+          <DataOptions/>
+          <DelimitedOptions fileDelimiter="commadelimited" removeEscape="false" textQualifier="na"/>
+        </Options>
+      </ProfileProperties>
+      <DataElements>
+        <FlatFileRecord detectFormat="numberofcolumns" isNode="true" key="1" name="Record">
+          <FlatFileElements isNode="true" key="2" name="Elements">
+            <FlatFileElement dataType="character" enforceUnique="false" isMappable="true" isNode="true" key="23" mandatory="false" maxLength="0" minLength="0" name="ID" useToIdentifyFormat="false" validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat/>
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character" enforceUnique="false" isMappable="true" isNode="true" key="13" mandatory="false" maxLength="0" minLength="0" name="First Name" useToIdentifyFormat="false" validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat/>
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character" enforceUnique="false" isMappable="true" isNode="true" key="14" mandatory="false" maxLength="0" minLength="0" name="Last Name" useToIdentifyFormat="false" validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat/>
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character" enforceUnique="false" isMappable="true" isNode="true" key="15" mandatory="false" maxLength="0" minLength="0" name="Email" useToIdentifyFormat="false" validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat/>
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character" enforceUnique="false" isMappable="true" isNode="true" key="16" mandatory="false" maxLength="0" minLength="0" name="Phone" useToIdentifyFormat="false" validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat/>
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character" enforceUnique="false" isMappable="true" isNode="true" key="17" mandatory="false" maxLength="0" minLength="0" name="Fax" useToIdentifyFormat="false" validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat/>
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character" enforceUnique="false" isMappable="true" isNode="true" key="18" mandatory="false" maxLength="0" minLength="0" name="Mailing Street" useToIdentifyFormat="false" validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat/>
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character" enforceUnique="false" isMappable="true" isNode="true" key="19" mandatory="false" maxLength="0" minLength="0" name="Mailing City" useToIdentifyFormat="false" validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat/>
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character" enforceUnique="false" isMappable="true" isNode="true" key="20" mandatory="false" maxLength="0" minLength="0" name="Mailing State" useToIdentifyFormat="false" validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat/>
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character" enforceUnique="false" isMappable="true" isNode="true" key="21" mandatory="false" maxLength="0" minLength="0" name="Mailing Postal Code" useToIdentifyFormat="false" validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat/>
+              </DataFormat>
+            </FlatFileElement>
+            <FlatFileElement dataType="character" enforceUnique="false" isMappable="true" isNode="true" key="22" mandatory="false" maxLength="0" minLength="0" name="Mailing Country" useToIdentifyFormat="false" validateData="false">
+              <DataFormat>
+                <ProfileCharacterFormat/>
+              </DataFormat>
+            </FlatFileElement>
+          </FlatFileElements>
+        </FlatFileRecord>
+      </DataElements>
+    </FlatFileProfile>
+  </bns:object>
+</bns:Component>

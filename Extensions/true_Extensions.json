@@ -1,0 +1,28 @@
+{
+  "job": "Update Environment Extensions",
+  "extensionJson": {
+    "@type": "EnvironmentExtensions",
+    "connections": {
+      "@type": "Connections",
+      "connection": []
+    },
+    "processProperties": {
+      "@type": "OverrideProcessProperties",
+      "ProcessProperty": []
+    },
+    "properties": {
+      "@type": "",
+      "property": [
+        {
+          "@type": "",
+          "name": "DPP_TEST_BATCH_SIZE",
+          "value": ""
+        }
+      ]
+    },
+    "environmentId": "",
+    "partial": "true",
+    "extensionGroupId": "",
+    "id": ""
+  }
+}

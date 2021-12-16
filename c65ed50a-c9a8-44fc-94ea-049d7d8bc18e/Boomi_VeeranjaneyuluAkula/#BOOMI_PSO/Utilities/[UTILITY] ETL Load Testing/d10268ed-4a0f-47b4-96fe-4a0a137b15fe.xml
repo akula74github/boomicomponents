@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/#BOOMI_PSO/Utilities/[UTILITY] ETL Load Testing" componentId="d10268ed-4a0f-47b4-96fe-4a0a137b15fe" version="1" name="[TEST] Contact Record FF &gt; [TEST] Contact Record JSON" type="transform.map" createdDate="2021-05-13T14:26:16Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2021-05-13T14:26:16Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="[UTILITY] ETL Load Testing" folderId="Rjo0MDE3ODgw" copiedFromComponentId="4cfc99f3-54cc-4240-bf2b-5418cae58e57" copiedFromComponentVersion="2">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <Map xmlns="" fromProfile="cff9387b-89c8-48ba-a818-cdf6d3fd5c40" toProfile="1ff29749-ed42-4629-b80b-3e074eabc82c">
+      <Mappings>
+        <Mapping fromKey="23" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='23']" fromNamePath="Record/Elements/ID" fromType="profile" toKey="11" toKeyPath="*[@key='1']/*[@key='2']/*[@key='11']" toNamePath="Root/Object/id" toType="profile"/>
+        <Mapping fromKey="13" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='13']" fromNamePath="Record/Elements/First Name" fromType="profile" toKey="3" toKeyPath="*[@key='1']/*[@key='2']/*[@key='3']" toNamePath="Root/Object/firstName" toType="profile"/>
+        <Mapping fromKey="14" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='14']" fromNamePath="Record/Elements/Last Name" fromType="profile" toKey="4" toKeyPath="*[@key='1']/*[@key='2']/*[@key='4']" toNamePath="Root/Object/lastName" toType="profile"/>
+        <Mapping fromKey="15" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='15']" fromNamePath="Record/Elements/Email" fromType="profile" toKey="5" toKeyPath="*[@key='1']/*[@key='2']/*[@key='5']" toNamePath="Root/Object/email" toType="profile"/>
+        <Mapping fromKey="16" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='16']" fromNamePath="Record/Elements/Phone" fromType="profile" toKey="6" toKeyPath="*[@key='1']/*[@key='2']/*[@key='6']" toNamePath="Root/Object/phone" toType="profile"/>
+        <Mapping fromKey="18" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='18']" fromNamePath="Record/Elements/Mailing Street" fromType="profile" toKey="7" toKeyPath="*[@key='1']/*[@key='2']/*[@key='7']" toNamePath="Root/Object/addressStreet" toType="profile"/>
+        <Mapping fromKey="19" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='19']" fromNamePath="Record/Elements/Mailing City" fromType="profile" toKey="8" toKeyPath="*[@key='1']/*[@key='2']/*[@key='8']" toNamePath="Root/Object/addressCity" toType="profile"/>
+        <Mapping fromKey="21" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='21']" fromNamePath="Record/Elements/Mailing Postal Code" fromType="profile" toKey="9" toKeyPath="*[@key='1']/*[@key='2']/*[@key='9']" toNamePath="Root/Object/addressZip" toType="profile"/>
+        <Mapping fromKey="22" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='22']" fromNamePath="Record/Elements/Mailing Country" fromType="profile" toKey="10" toKeyPath="*[@key='1']/*[@key='2']/*[@key='10']" toNamePath="Root/Object/addressCountry" toType="profile"/>
+      </Mappings>
+      <Functions optimizeExecutionOrder="true"/>
+      <Defaults/>
+      <DocumentCacheJoins/>
+    </Map>
+  </bns:object>
+</bns:Component>

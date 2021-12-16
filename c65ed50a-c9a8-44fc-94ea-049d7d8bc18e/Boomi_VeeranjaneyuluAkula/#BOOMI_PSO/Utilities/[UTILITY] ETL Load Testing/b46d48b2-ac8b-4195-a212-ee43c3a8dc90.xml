@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/#BOOMI_PSO/Utilities/[UTILITY] ETL Load Testing" componentId="b46d48b2-ac8b-4195-a212-ee43c3a8dc90" version="1" name="[TEST] Generate Test Data" type="script.processing" createdDate="2021-05-13T14:27:23Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2021-05-13T14:27:23Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="[UTILITY] ETL Load Testing" folderId="Rjo0MDE3ODgw" copiedFromComponentId="2d4d26f9-b3ae-48e5-b505-dc6d0e1eba5e" copiedFromComponentVersion="1">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <ProcessingScript xmlns="" language="groovy2">
+      <script>import java.util.Properties;
+import java.io.InputStream;
+import com.boomi.execution.ExecutionUtil;
+import com.boomi.process.logging.BaseProcessLogger;
+ 
+BaseProcessLogger logger = ExecutionUtil.getBaseLogger();
+
+
+batchSize = ExecutionUtil.getDynamicProcessProperty("DPP_TEST_BATCH_SIZE");
+logger.info("Batch Size: " + batchSize);
+int batchSizeInt = Integer.parseInt(batchSize);
+
+for( int i = 0; i &lt; dataContext.getDataCount(); i++ ) {
+    InputStream is = dataContext.getStream(i);
+    Properties props = dataContext.getProperties(i);
+    
+    for ( int file = 0; file &lt; batchSizeInt; file++ ){
+        logger.info("Output file: " + file);
+        dataContext.storeStream(is, props);
+    }
+}</script>
+    </ProcessingScript>
+  </bns:object>
+</bns:Component>

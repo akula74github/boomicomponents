@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/#BOOMI_PSO/Utilities/[UTILITY] ETL Load Testing" componentId="759abd0e-46e4-46fa-9464-baf7b48a517e" version="1" name="[TEST] Results" type="documentcache" createdDate="2021-05-13T14:26:09Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2021-05-13T14:26:09Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="[UTILITY] ETL Load Testing" folderId="Rjo0MDE3ODgw" copiedFromComponentId="92044ef7-0ede-4ce9-8449-6ab011324e6d" copiedFromComponentVersion="1">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <DocumentCache xmlns="" enforceSingleLucene="true" profile="b9975362-d215-4bfe-8d0c-c15daa262c08" profileType="profile.flatfile">
+      <CacheIndex indexId="3" indexName="DDP_TEST_INDEX">
+        <cacheKey alias="DDP_TEST_INDEX" defaultValue="" id="4" propertyId="dynamicdocument.DDP_TEST_INDEX" propertyName="Dynamic Document Property - DDP_TEST_INDEX" xsi:type="DocumentPropertyKeyConfig"/>
+      </CacheIndex>
+    </DocumentCache>
+  </bns:object>
+</bns:Component>

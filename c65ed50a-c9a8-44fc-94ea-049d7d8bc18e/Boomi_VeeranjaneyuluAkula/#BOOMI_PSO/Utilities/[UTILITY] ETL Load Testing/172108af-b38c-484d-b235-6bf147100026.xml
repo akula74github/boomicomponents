@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/#BOOMI_PSO/Utilities/[UTILITY] ETL Load Testing" componentId="172108af-b38c-484d-b235-6bf147100026" version="1" name="[TEST] MXBean Metrics GET" type="script.processing" createdDate="2021-05-13T14:26:06Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2021-05-13T14:26:06Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="[UTILITY] ETL Load Testing" folderId="Rjo0MDE3ODgw" copiedFromComponentId="a0888292-c844-40cf-af1a-f6225650c543" copiedFromComponentVersion="1">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <ProcessingScript xmlns="" language="groovy2">
+      <script>import java.lang.management.ManagementFactory;&#13;
+//import java.lang.management.RuntimeMXBean;&#13;
+import java.lang.management.ThreadMXBean;&#13;
+import java.lang.management.MemoryMXBean;&#13;
+import com.boomi.execution.ExecutionManager;&#13;
+import com.boomi.execution.ExecutionUtil;&#13;
+import com.boomi.process.logging.BaseProcessLogger;&#13;
+&#13;
+BaseProcessLogger logger = ExecutionUtil.getBaseLogger();&#13;
+&#13;
+def executionId = ExecutionManager.getCurrent().executionId.toString() ;&#13;
+//def executionId = Thread.currentThread().getId().toString();&#13;
+&#13;
+//RuntimeMXBean runtimeBeans = ManagementFactory.getRuntimeMXBean();&#13;
+ThreadMXBean threadBeans = ManagementFactory.getThreadMXBean();&#13;
+MemoryMXBean memoryBeans = ManagementFactory.getMemoryMXBean();&#13;
+&#13;
+//CPU Metrics&#13;
+threadCpuTimeNS = threadBeans.getCurrentThreadCpuTime();&#13;
+threadCpuTimeMS = (threadCpuTimeNS / 1000000).toString();&#13;
+//ExecutionUtil.setDynamicProcessProperty("DPP_TEST_THREAD_CPU_TIME", threadCpuTimeMS, false);&#13;
+&#13;
+//Memory Metrics&#13;
+usedHeap = memoryBeans.getHeapMemoryUsage().getUsed().toString();&#13;
+//ExecutionUtil.setDynamicProcessProperty("DPP_TEST_USED_HEAP", usedHeap, false);&#13;
+&#13;
+for ( int i = 0; i &lt; dataContext.getDataCount(); i++ ) {&#13;
+  InputStream is = dataContext.getStream(i);&#13;
+  Properties props = dataContext.getProperties(i);&#13;
+  &#13;
+  output = executionId + "~" + threadCpuTimeMS + "~" + usedHeap&#13;
+  is = new ByteArrayInputStream(output.toString().getBytes());&#13;
+  &#13;
+  dataContext.storeStream(is, props);&#13;
+}</script>
+    </ProcessingScript>
+  </bns:object>
+</bns:Component>

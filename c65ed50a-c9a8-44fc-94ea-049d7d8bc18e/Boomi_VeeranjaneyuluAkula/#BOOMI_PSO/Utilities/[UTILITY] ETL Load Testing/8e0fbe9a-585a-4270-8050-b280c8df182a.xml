@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/#BOOMI_PSO/Utilities/[UTILITY] ETL Load Testing" componentId="8e0fbe9a-585a-4270-8050-b280c8df182a" version="1" name="[TEST] (Sub) Business Logic" type="process" createdDate="2021-05-13T14:25:45Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2021-05-13T14:25:45Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="[UTILITY] ETL Load Testing" folderId="Rjo0MDE3ODgw" copiedFromComponentId="6d89bfd5-e134-428d-bd70-18a1b13ed582" copiedFromComponentVersion="1">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <process xmlns="" allowSimultaneous="false" enableUserLog="false" processLogOnErrorOnly="false" purgeDataImmediately="false" updateRunDates="false" workload="general">
+      <shapes>
+        <shape image="start" name="shape1" shapetype="start" userlabel="" x="96.0" y="96.0">
+          <configuration>
+            <passthroughaction/>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape2" x="288.0" y="105.0">
+              <linesegment length="0" name="shape1.dragpoint1.lineseg1" orient="horizontal" x="130.0" y="111.0"/>
+              <linesegment length="0" name="shape1.dragpoint1.lineseg2" orient="vertical" x="130.0" y="111.0"/>
+              <linesegment length="87" name="shape1.dragpoint1.lineseg3" orient="horizontal" x="130.0" y="111.0"/>
+              <linesegment length="0" name="shape1.dragpoint1.lineseg4" orient="vertical" x="217.0" y="111.0"/>
+              <linesegment length="71" name="shape1.dragpoint1.lineseg5" orient="horizontal" x="217.0" y="111.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="map_icon" name="shape2" shapetype="map" userlabel="" x="304.0" y="96.0">
+          <configuration>
+            <map mapId="d10268ed-4a0f-47b4-96fe-4a0a137b15fe"/>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape2.dragpoint1" toShape="shape3" x="624.0" y="105.0">
+              <linesegment length="0" name="shape2.dragpoint1.lineseg1" orient="horizontal" x="338.0" y="111.0"/>
+              <linesegment length="0" name="shape2.dragpoint1.lineseg2" orient="vertical" x="338.0" y="111.0"/>
+              <linesegment length="151" name="shape2.dragpoint1.lineseg3" orient="horizontal" x="338.0" y="111.0"/>
+              <linesegment length="0" name="shape2.dragpoint1.lineseg4" orient="vertical" x="489.0" y="111.0"/>
+              <linesegment length="135" name="shape2.dragpoint1.lineseg5" orient="horizontal" x="489.0" y="111.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="returndocuments_icon" name="shape3" shapetype="returndocuments" userlabel="" x="640.0" y="96.0">
+          <configuration>
+            <returndocuments label=""/>
+          </configuration>
+          <dragpoints/>
+        </shape>
+      </shapes>
+    </process>
+  </bns:object>
+  <bns:processOverrides/>
+</bns:Component>
