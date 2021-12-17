@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/#DEMO_CICD" componentId="ce1a1dd9-6983-408d-8235-e66e58da2d03" version="1" name=" Create Operation" type="connector-action" subType="officialboomi-X3979C-sftpv2-prod" createdDate="2021-12-17T20:13:26Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2021-12-17T20:13:26Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="#DEMO_CICD" folderId="Rjo0NDc2OTAy" copiedFromComponentId="333b856a-a431-4c45-9377-d4c897427081" copiedFromComponentVersion="1">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <Operation xmlns="" returnApplicationErrors="true" trackResponse="false">
+      <Archiving directory="" enabled="false"/>
+      <Configuration>
+        <GenericOperationConfig objectTypeId="File" objectTypeName="File" operationType="CREATE" requestProfileType="binary" responseProfile="56146c4e-2cfd-4de4-bba6-c40b4e174f05" responseProfileType="json">
+          <field id="actionIfFileExists" type="string" value="FORCE_UNIQUE_NAMES"/>
+          <field id="stagingDirectory" type="string" value=""/>
+          <field id="tempExtension" type="string" value=""/>
+          <field id="targetFileName" type="string" value=""/>
+          <field id="tempFileName" type="string" value=""/>
+          <cookie role="OUTPUT">
+            <value>{"includeAllMetadata":true}</value>
+          </cookie>
+          <Options>
+            <QueryOptions>
+              <Fields>
+                <ConnectorObject name="File">
+                  <FieldList>
+                    <ConnectorField filterable="true" name="fileName" selectable="true" selected="true" sortable="true"/>
+                    <ConnectorField filterable="true" name="remoteDirectory" selectable="true" selected="true" sortable="true"/>
+                    <ConnectorField filterable="true" name="timestamp" selectable="true" selected="true" sortable="true"/>
+                  </FieldList>
+                </ConnectorObject>
+              </Fields>
+              <Inputs/>
+            </QueryOptions>
+          </Options>
+        </GenericOperationConfig>
+      </Configuration>
+      <Tracking>
+        <TrackedFields/>
+      </Tracking>
+      <Caching/>
+    </Operation>
+  </bns:object>
+</bns:Component>

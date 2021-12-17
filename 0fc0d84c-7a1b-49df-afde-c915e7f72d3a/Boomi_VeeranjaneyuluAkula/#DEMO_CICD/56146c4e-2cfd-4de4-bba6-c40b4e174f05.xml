@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/#DEMO_CICD" componentId="56146c4e-2cfd-4de4-bba6-c40b4e174f05" version="1" name="SFTP V2 File CREATE Response 2" type="profile.json" createdDate="2021-12-17T20:13:26Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2021-12-17T20:13:26Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="#DEMO_CICD" folderId="Rjo0NDc2OTAy" copiedFromComponentId="333b856a-a431-4c45-9377-d4c897427081" copiedFromComponentVersion="1">
+  <bns:encryptedValues/>
+  <bns:object>
+    <JSONProfile xmlns="" strict="false">
+      <GeneratorConfig enableFieldLengthValidation="true" enableParseDateTime="true"/>
+      <DataElements>
+        <JSONRootValue dataType="character" isMappable="true" isNode="true" key="1" name="File">
+          <DataFormat>
+            <ProfileCharacterFormat/>
+          </DataFormat>
+          <JSONObject isMappable="false" isNode="true" key="2" name="Object">
+            <JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="3" name="fileName" required="true">
+              <DataFormat>
+                <ProfileCharacterFormat/>
+              </DataFormat>
+            </JSONObjectEntry>
+            <JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="4" name="remoteDirectory" required="true">
+              <DataFormat>
+                <ProfileCharacterFormat/>
+              </DataFormat>
+            </JSONObjectEntry>
+            <JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="5" name="timestamp" required="true">
+              <DataFormat>
+                <ProfileCharacterFormat/>
+              </DataFormat>
+            </JSONObjectEntry>
+          </JSONObject>
+        </JSONRootValue>
+      </DataElements>
+      <tagLists/>
+    </JSONProfile>
+  </bns:object>
+</bns:Component>
