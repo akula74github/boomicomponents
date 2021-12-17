@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/#DEMO_CICD" componentId="54047f8a-49fc-43fb-8cf8-5185dc7e1f34" version="1" name=" List Operation" type="connector-action" subType="officialboomi-X3979C-sftpv2-prod" createdDate="2021-12-17T20:13:26Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2021-12-17T20:13:26Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="#DEMO_CICD" folderId="Rjo0NDc2OTAy" copiedFromComponentId="333b856a-a431-4c45-9377-d4c897427081" copiedFromComponentVersion="1">
+  <bns:encryptedValues/>
+  <bns:description>In this operation we are not enabling the Recursive Listing of Directory check box. so we will get files from specified directory.</bns:description>
+  <bns:object>
+    <Operation xmlns="" returnApplicationErrors="false" trackResponse="true">
+      <Archiving directory="" enabled="false"/>
+      <Configuration>
+        <GenericOperationConfig customOperationType="LIST" objectTypeId="DIRECTORY" objectTypeName="Directory" operationType="QUERY" requestProfileType="xml" responseProfileType="binary">
+          <field id="count" type="integer" value="-1"/>
+          <field id="recursiveList" type="boolean" value="false"/>
+          <Options>
+            <QueryOptions>
+              <Fields>
+                <ConnectorObject name="Directory">
+                  <FieldList>
+                    <ConnectorField filterable="true" name="fileName" selected="false" type="FilePath"/>
+                    <ConnectorField filterable="true" name="fileSize" selected="false" type="Comparable"/>
+                    <ConnectorField filterable="true" name="modifiedDate" selected="false" type="Comparable"/>
+                    <ConnectorField filterable="true" name="isDirectory" selected="false" type="Boolean"/>
+                  </FieldList>
+                  <Filter>
+                    <ConnectorBaseFilter/>
+                  </Filter>
+                  <Sorts/>
+                </ConnectorObject>
+              </Fields>
+              <Inputs/>
+            </QueryOptions>
+          </Options>
+        </GenericOperationConfig>
+      </Configuration>
+      <Tracking>
+        <TrackedFields/>
+      </Tracking>
+      <Caching/>
+    </Operation>
+  </bns:object>
+</bns:Component>

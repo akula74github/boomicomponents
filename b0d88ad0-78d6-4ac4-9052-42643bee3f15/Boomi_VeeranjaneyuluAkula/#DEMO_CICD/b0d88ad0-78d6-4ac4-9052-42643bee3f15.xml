@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/#DEMO_CICD" componentId="b0d88ad0-78d6-4ac4-9052-42643bee3f15" version="1" name="List" type="process" createdDate="2021-12-17T20:13:26Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2021-12-17T20:13:26Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="#DEMO_CICD" folderId="Rjo0NDc2OTAy" copiedFromComponentId="333b856a-a431-4c45-9377-d4c897427081" copiedFromComponentVersion="1">
+  <bns:encryptedValues/>
+  <bns:description>This process demonstrates how to get file from an SFTP directory. This process also shows a best practice pattern for retrieving file,  You can retrieve  the files present in the directory.</bns:description>
+  <bns:object>
+    <process xmlns="" allowSimultaneous="false" enableUserLog="false" processLogOnErrorOnly="false" purgeDataImmediately="false" updateRunDates="true" workload="general">
+      <shapes>
+        <shape image="start" name="shape1" shapetype="start" userlabel="" x="0.0" y="96.0">
+          <configuration>
+            <noaction/>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape8" x="48.0" y="265.0">
+              <linesegment length="0" name="shape1.dragpoint1.lineseg1" orient="horizontal" x="34.0" y="111.0"/>
+              <linesegment length="0" name="shape1.dragpoint1.lineseg2" orient="vertical" x="34.0" y="111.0"/>
+              <linesegment length="15" name="shape1.dragpoint1.lineseg3" orient="horizontal" x="34.0" y="111.0"/>
+              <linesegment length="160" name="shape1.dragpoint1.lineseg4" orient="vertical" x="49.0" y="111.0"/>
+              <linesegment length="-1" name="shape1.dragpoint1.lineseg5" orient="horizontal" x="49.0" y="271.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="documentproperties_icon" name="shape2" shapetype="documentproperties" userlabel="Setting up Directory document properties" x="224.0" y="96.0">
+          <configuration>
+            <documentproperties>
+              <documentproperty defaultValue="" isDynamicCredential="false" isTradingPartner="false" name="SFTP V2 - Remote Directory" persist="false" propertyId="connector.officialboomi-X3979C-sftpv2-prod.remoteDirectory" shouldEncrypt="false">
+                <sourcevalues>
+                  <parametervalue key="1" valueType="static">
+                    <staticparameter staticproperty="/home/ec2-user/reg"/>
+                  </parametervalue>
+                </sourcevalues>
+              </documentproperty>
+            </documentproperties>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape2.dragpoint1" toShape="shape3" x="464.0" y="105.0">
+              <linesegment length="0" name="shape2.dragpoint1.lineseg1" orient="horizontal" x="258.0" y="111.0"/>
+              <linesegment length="0" name="shape2.dragpoint1.lineseg2" orient="vertical" x="258.0" y="111.0"/>
+              <linesegment length="111" name="shape2.dragpoint1.lineseg3" orient="horizontal" x="258.0" y="111.0"/>
+              <linesegment length="0" name="shape2.dragpoint1.lineseg4" orient="vertical" x="369.0" y="111.0"/>
+              <linesegment length="95" name="shape2.dragpoint1.lineseg5" orient="horizontal" x="369.0" y="111.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="connectoraction_icon" name="shape3" shapetype="connectoraction" userlabel="" x="480.0" y="96.0">
+          <configuration>
+            <connectoraction actionType="LIST" allowDynamicCredentials="NONE" connectionId="fcbb6ce8-0247-488d-8fad-05c242770c99" connectorType="officialboomi-X3979C-sftpv2-prod" hideSettings="false" operationId="54047f8a-49fc-43fb-8cf8-5185dc7e1f34" parameter-profile="EMBEDDED|genericparameterchooser|54047f8a-49fc-43fb-8cf8-5185dc7e1f34">
+              <parameters/>
+              <dynamicProperties/>
+            </connectoraction>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape3.dragpoint1" toShape="shape4" x="864.0" y="105.0">
+              <linesegment length="0" name="shape3.dragpoint1.lineseg1" orient="horizontal" x="514.0" y="111.0"/>
+              <linesegment length="0" name="shape3.dragpoint1.lineseg2" orient="vertical" x="514.0" y="111.0"/>
+              <linesegment length="183" name="shape3.dragpoint1.lineseg3" orient="horizontal" x="514.0" y="111.0"/>
+              <linesegment length="0" name="shape3.dragpoint1.lineseg4" orient="vertical" x="697.0" y="111.0"/>
+              <linesegment length="167" name="shape3.dragpoint1.lineseg5" orient="horizontal" x="697.0" y="111.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="stop_icon" name="shape4" shapetype="stop" userlabel="" x="880.0" y="96.0">
+          <configuration>
+            <stop continue="true"/>
+          </configuration>
+          <dragpoints/>
+        </shape>
+        <shape image="documentproperties_icon" name="shape5" shapetype="documentproperties" userlabel="Setting up Directory document properties" x="224.0" y="272.0">
+          <configuration>
+            <documentproperties>
+              <documentproperty defaultValue="" isDynamicCredential="false" isTradingPartner="false" name="SFTP V2 - Remote Directory" persist="false" propertyId="connector.officialboomi-X3979C-sftpv2-prod.remoteDirectory" shouldEncrypt="false">
+                <sourcevalues>
+                  <parametervalue key="1" valueType="static">
+                    <staticparameter staticproperty="/home/ec2-user/reg"/>
+                  </parametervalue>
+                </sourcevalues>
+              </documentproperty>
+            </documentproperties>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape5.dragpoint1" toShape="shape6" x="496.0" y="281.0">
+              <linesegment length="0" name="shape5.dragpoint1.lineseg1" orient="horizontal" x="258.0" y="287.0"/>
+              <linesegment length="0" name="shape5.dragpoint1.lineseg2" orient="vertical" x="258.0" y="287.0"/>
+              <linesegment length="127" name="shape5.dragpoint1.lineseg3" orient="horizontal" x="258.0" y="287.0"/>
+              <linesegment length="0" name="shape5.dragpoint1.lineseg4" orient="vertical" x="385.0" y="287.0"/>
+              <linesegment length="111" name="shape5.dragpoint1.lineseg5" orient="horizontal" x="385.0" y="287.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="connectoraction_icon" name="shape6" shapetype="connectoraction" userlabel="Cloud Enable check box [Recursive Listing of Directory]" x="512.0" y="272.0">
+          <configuration>
+            <connectoraction actionType="LIST" allowDynamicCredentials="NONE" connectionId="fcbb6ce8-0247-488d-8fad-05c242770c99" connectorType="officialboomi-X3979C-sftpv2-prod" hideSettings="false" operationId="278e92d1-60d6-4af4-b499-b703511dca96" parameter-profile="EMBEDDED|genericparameterchooser|278e92d1-60d6-4af4-b499-b703511dca96">
+              <parameters/>
+              <dynamicProperties/>
+            </connectoraction>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape6.dragpoint1" toShape="shape7" x="784.0" y="281.0">
+              <linesegment length="0" name="shape6.dragpoint1.lineseg1" orient="horizontal" x="546.0" y="287.0"/>
+              <linesegment length="0" name="shape6.dragpoint1.lineseg2" orient="vertical" x="546.0" y="287.0"/>
+              <linesegment length="127" name="shape6.dragpoint1.lineseg3" orient="horizontal" x="546.0" y="287.0"/>
+              <linesegment length="0" name="shape6.dragpoint1.lineseg4" orient="vertical" x="673.0" y="287.0"/>
+              <linesegment length="111" name="shape6.dragpoint1.lineseg5" orient="horizontal" x="673.0" y="287.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="stop_icon" name="shape7" shapetype="stop" userlabel="" x="800.0" y="272.0">
+          <configuration>
+            <stop continue="true"/>
+          </configuration>
+          <dragpoints/>
+        </shape>
+        <shape image="branch_icon" name="shape8" shapetype="branch" userlabel="" x="64.0" y="256.0">
+          <configuration>
+            <branch numBranches="2"/>
+          </configuration>
+          <dragpoints>
+            <dragpoint identifier="1" name="shape8.dragpoint1" text="1" toShape="shape2" x="208.0" y="105.0">
+              <linesegment length="0" name="shape8.dragpoint1.lineseg1" orient="horizontal" x="98.0" y="271.0"/>
+              <linesegment length="0" name="shape8.dragpoint1.lineseg2" orient="vertical" x="98.0" y="271.0"/>
+              <linesegment length="63" name="shape8.dragpoint1.lineseg3" orient="horizontal" x="98.0" y="271.0"/>
+              <linesegment length="160" name="shape8.dragpoint1.lineseg4" orient="vertical" x="161.0" y="111.0"/>
+              <linesegment label="1" length="47" name="shape8.dragpoint1.lineseg5" orient="horizontal" x="161.0" y="111.0"/>
+            </dragpoint>
+            <dragpoint identifier="2" name="shape8.dragpoint2" text="2" toShape="shape5" x="208.0" y="281.0">
+              <linesegment length="0" name="shape8.dragpoint2.lineseg1" orient="horizontal" x="98.0" y="271.0"/>
+              <linesegment length="0" name="shape8.dragpoint2.lineseg2" orient="vertical" x="98.0" y="271.0"/>
+              <linesegment length="63" name="shape8.dragpoint2.lineseg3" orient="horizontal" x="98.0" y="271.0"/>
+              <linesegment length="16" name="shape8.dragpoint2.lineseg4" orient="vertical" x="161.0" y="271.0"/>
+              <linesegment label="2" length="47" name="shape8.dragpoint2.lineseg5" orient="horizontal" x="161.0" y="287.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+      </shapes>
+    </process>
+  </bns:object>
+  <bns:processOverrides/>
+</bns:Component>
