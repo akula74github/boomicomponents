@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/Training/boomi_world_2019" componentId="972fb42f-9abe-410b-97ba-82b610d4c42a" version="2" name="New Get Operation" type="connector-action" subType="http" createdDate="2020-03-06T02:18:53Z" createdBy="ajay.natarajan@dell.com" modifiedDate="2020-03-06T12:16:10Z" modifiedBy="ajay.natarajan@dell.com" deleted="false" currentVersion="true" folderName="boomi_world_2019" folderId="RjoyOTQzMDk3">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <Operation xmlns="">
+      <Archiving directory="" enabled="false"/>
+      <Configuration>
+        <HttpGetAction dataContentType="text/plain" followRedirects="false" methodType="GET" mimePassthrough="false" requestProfileType="NONE" responseProfileType="NONE" returnErrors="false" returnMimeResponse="false">
+          <requestHeaders/>
+          <pathElements/>
+          <responseHeaderMapping/>
+          <reflectHeaders/>
+        </HttpGetAction>
+      </Configuration>
+      <Tracking>
+        <TrackedFields/>
+      </Tracking>
+      <Caching/>
+    </Operation>
+  </bns:object>
+</bns:Component>

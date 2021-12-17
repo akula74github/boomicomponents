@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/Training/boomi_world_2019" componentId="4edbdc44-389d-4913-909d-0989bf76e935" version="2" name="New Map Success" type="transform.map" createdDate="2020-03-06T02:15:37Z" createdBy="ajay.natarajan@dell.com" modifiedDate="2020-03-06T12:16:42Z" modifiedBy="ajay.natarajan@dell.com" deleted="false" currentVersion="true" folderName="boomi_world_2019" folderId="RjoyOTQzMDk3">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <Map xmlns="" fromProfile="d8072095-d42e-4f41-b467-55e998a8b3bc" toProfile="54e2618f-f2c3-400f-8193-18926616d26a">
+      <Mappings>
+        <Mapping fromKey="3" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='3']" fromNamePath="Root/Object/Name" fromType="profile" toKey="3" toKeyPath="*[@key='1']/*[@key='2']/*[@key='3']" toNamePath="Root/Object/Name" toType="profile"/>
+        <Mapping fromKey="4" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='4']" fromNamePath="Root/Object/AccountId" fromType="profile" toKey="4" toKeyPath="*[@key='1']/*[@key='2']/*[@key='4']" toNamePath="Root/Object/AccountId" toType="profile"/>
+        <Mapping fromKey="5" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='5']" fromNamePath="Root/Object/Description" fromType="profile" toKey="5" toKeyPath="*[@key='1']/*[@key='2']/*[@key='5']" toNamePath="Root/Object/Description" toType="profile"/>
+        <Mapping fromKey="6" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='6']" fromNamePath="Root/Object/Country" fromType="profile" toKey="6" toKeyPath="*[@key='1']/*[@key='2']/*[@key='6']" toNamePath="Root/Object/Country" toType="profile"/>
+      </Mappings>
+      <Functions optimizeExecutionOrder="true"/>
+      <Defaults>
+        <Default toKey="7" value="Success"/>
+      </Defaults>
+      <DocumentCacheJoins/>
+    </Map>
+  </bns:object>
+</bns:Component>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/Training/boomi_world_2019" componentId="a44a127a-46a7-49c3-964e-33501573f577" version="2" name="New Http Connection" type="connector-settings" subType="http" createdDate="2020-03-06T02:18:17Z" createdBy="ajay.natarajan@dell.com" modifiedDate="2020-03-06T12:15:58Z" modifiedBy="ajay.natarajan@dell.com" deleted="false" currentVersion="true" folderName="boomi_world_2019" folderId="RjoyOTQzMDk3">
+  <bns:encryptedValues>
+    <bns:encryptedValue path="//HttpSettings/AuthSettings/@password" isSet="true"/>
+  </bns:encryptedValues>
+  <bns:description/>
+  <bns:object>
+    <HttpSettings xmlns="" authenticationType="BASIC" url="http://localhost:8080">
+      <AuthSettings password="664b7c4fa74566a0fd68c4fa52bd5a7f08b0a04a939cf4ad997bf6f2d1e75c7ae0068259de20fbdb17c6aafd0dd6ebf4cc14ddabf553e2be06c6e0a1f67dd473" user="username"/>
+      <OAuthSettings accessToken="" accessTokenURL="" authorizationURL="" consumerKey="" realm="" requestTokenURL="" suppressBlankAccessToken="false"/>
+      <OAuth2Settings grantType="code">
+        <credentials clientId=""/>
+        <authorizationTokenEndpoint url="">
+          <sslOptions/>
+        </authorizationTokenEndpoint>
+        <authorizationParameters/>
+        <accessTokenEndpoint url="">
+          <sslOptions/>
+        </accessTokenEndpoint>
+        <accessTokenParameters/>
+        <scope/>
+      </OAuth2Settings>
+      <AwsSettings>
+        <credentials>
+          <accessKeyId/>
+          <awsService>s3</awsService>
+          <customService/>
+          <awsRegion>ap-northeast-1</awsRegion>
+          <customRegion/>
+        </credentials>
+      </AwsSettings>
+      <SSLOptions clientauth="false" trustServerCert="false"/>
+    </HttpSettings>
+  </bns:object>
+</bns:Component>
