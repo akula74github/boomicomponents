@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/Training/boomi_world_2019" componentId="b826a785-147f-495f-b0ba-72aacd843146" version="5" name="httpservice" type="process" createdDate="2019-12-01T20:23:39Z" createdBy="ajay.natarajan@dell.com" modifiedDate="2020-05-15T16:15:55Z" modifiedBy="ajay.natarajan@dell.com" deleted="false" currentVersion="true" folderName="boomi_world_2019" folderId="RjoyOTQzMDk3">
+  <bns:encryptedValues/>
+  <bns:description>Main Process</bns:description>
+  <bns:object>
+    <process xmlns="" allowSimultaneous="false" enableUserLog="false" processLogOnErrorOnly="false" purgeDataImmediately="false" updateRunDates="false" workload="general">
+      <shapes>
+        <shape image="start" name="shape1" shapetype="start" userlabel="Adding new display name" x="96.0" y="96.0">
+          <configuration>
+            <noaction/>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape16" x="272.0" y="105.0">
+              <linesegment length="0" name="shape1.dragpoint1.lineseg1" orient="horizontal" x="130.0" y="111.0"/>
+              <linesegment length="0" name="shape1.dragpoint1.lineseg2" orient="vertical" x="130.0" y="111.0"/>
+              <linesegment length="79" name="shape1.dragpoint1.lineseg3" orient="horizontal" x="130.0" y="111.0"/>
+              <linesegment length="0" name="shape1.dragpoint1.lineseg4" orient="vertical" x="209.0" y="111.0"/>
+              <linesegment length="63" name="shape1.dragpoint1.lineseg5" orient="horizontal" x="209.0" y="111.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="processcall_icon" name="shape16" shapetype="processcall" userlabel="Call Sub Process" x="288.0" y="96.0">
+          <configuration>
+            <processcall abort="true" processId="a7cc410c-8b22-48f7-acc6-44a57cacc23f" wait="true">
+              <parameters/>
+              <returnpaths>
+                <returnpaths childShapeName="shape9" returnLabel="Success"/>
+              </returnpaths>
+            </processcall>
+          </configuration>
+          <dragpoints>
+            <dragpoint identifier="shape9" name="shape16.dragpoint1" text="Success" toShape="shape17" x="448.0" y="105.0">
+              <linesegment length="0" name="shape16.dragpoint1.lineseg1" orient="horizontal" x="322.0" y="111.0"/>
+              <linesegment length="0" name="shape16.dragpoint1.lineseg2" orient="vertical" x="322.0" y="111.0"/>
+              <linesegment length="71" name="shape16.dragpoint1.lineseg3" orient="horizontal" x="322.0" y="111.0"/>
+              <linesegment length="0" name="shape16.dragpoint1.lineseg4" orient="vertical" x="393.0" y="111.0"/>
+              <linesegment label="Success" length="55" name="shape16.dragpoint1.lineseg5" orient="horizontal" x="393.0" y="111.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="returndocuments_icon" name="shape17" shapetype="returndocuments" userlabel="Return" x="464.0" y="96.0">
+          <configuration>
+            <returndocuments label="Return"/>
+          </configuration>
+          <dragpoints/>
+        </shape>
+      </shapes>
+    </process>
+  </bns:object>
+  <bns:processOverrides/>
+</bns:Component>
