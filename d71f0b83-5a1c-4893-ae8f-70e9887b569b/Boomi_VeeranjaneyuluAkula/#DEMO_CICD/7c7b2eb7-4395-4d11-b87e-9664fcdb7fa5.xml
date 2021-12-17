@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/#DEMO_CICD" componentId="7c7b2eb7-4395-4d11-b87e-9664fcdb7fa5" version="1" name=" get Operation" type="connector-action" subType="officialboomi-X3979C-sftpv2-prod" createdDate="2021-12-17T20:13:26Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2021-12-17T20:13:26Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="#DEMO_CICD" folderId="Rjo0NDc2OTAy" copiedFromComponentId="333b856a-a431-4c45-9377-d4c897427081" copiedFromComponentVersion="1">
+  <bns:encryptedValues/>
+  <bns:description>In the operation if you check the Include all metadata check box. you will get the file content along with the file modified date as time stamp. 
+</bns:description>
+  <bns:object>
+    <Operation xmlns="" returnApplicationErrors="true" trackResponse="true">
+      <Archiving directory="" enabled="false"/>
+      <Configuration>
+        <GenericOperationConfig objectTypeId="File" objectTypeName="File" operationType="GET" requestProfileType="xml" responseProfileType="binary">
+          <field id="deleteAfter" type="boolean" value="false"/>
+          <field id="failDeleteAfter" type="boolean" value="false"/>
+          <field id="includeAllMetadata" type="boolean" value="true"/>
+          <Options>
+            <QueryOptions>
+              <Fields>
+                <ConnectorObject name="File">
+                  <FieldList/>
+                </ConnectorObject>
+              </Fields>
+              <Inputs>
+                <Input key="0" name="ID"/>
+              </Inputs>
+            </QueryOptions>
+          </Options>
+        </GenericOperationConfig>
+      </Configuration>
+      <Tracking>
+        <TrackedFields/>
+      </Tracking>
+      <Caching/>
+    </Operation>
+  </bns:object>
+</bns:Component>

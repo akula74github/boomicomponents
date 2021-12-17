@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/#DEMO_CICD" componentId="fcbb6ce8-0247-488d-8fad-05c242770c99" version="1" name=" cloud production connection" type="connector-settings" subType="officialboomi-X3979C-sftpv2-prod" createdDate="2021-12-17T20:13:26Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2021-12-17T20:13:26Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="#DEMO_CICD" folderId="Rjo0NDc2OTAy" copiedFromComponentId="333b856a-a431-4c45-9377-d4c897427081" copiedFromComponentVersion="1">
+  <bns:encryptedValues>
+    <bns:encryptedValue path="//GenericConnectionConfig/field[@type='password']" isSet="true"/>
+    <bns:encryptedValue path="//GenericConnectionConfig/field[@type='password']" isSet="true"/>
+  </bns:encryptedValues>
+  <bns:description>Connection tab helps to provide the SFTP server information from which we need to retrieve the files, here we will be providing the server host and authentication details, authentication type using which the server should get connected will be provided in connection tab</bns:description>
+  <bns:object>
+    <GenericConnectionConfig xmlns="">
+      <field id="authType" type="string" value="Using public Key"/>
+      <field id="remoteDirectory" type="string" value=""/>
+      <field id="host" type="string" value="13.235.88.150"/>
+      <field id="username" type="string" value="ec2-user"/>
+      <field id="password" type="password"/>
+      <field id="port" type="integer"/>
+      <field id="keyPath" type="string" value=""/>
+      <field id="keyPswrd" type="password" value=""/>
+      <field id="hostEntry" type="string" value=""/>
+      <field id="isMaxExchange" type="boolean" value="false"/>
+      <field id="prvkeyContent" type="password" value="dcbc112491f3f91c9ab0592e6f7339662e7b91c552edaa4383c6edba6cc7ca4fd443c4323c29959aa838ebcffe7253fa9c217f93854ead9ac54fee93e821dd36"/>
+      <field id="pubkeyContent" type="password" value="4bb7113cf58575a6c1f552e50f32dedf4c996bc1c893e5e522b1057bc57f2f2f8d7507cfd1524dec504f549f8530f4f8b8d579bc441e1df98f21cf2c73f4464d"/>
+      <field id="keyPairName" type="string" value="dellboomiaws"/>
+      <field id="useKeyContent" type="boolean" value="true"/>
+      <field id="proxyEnable" type="boolean" value="false"/>
+      <field id="proxyType" type="string" value="atom"/>
+      <field id="proxyHost" type="string" value=""/>
+      <field id="proxyPort" type="integer"/>
+      <field id="proxyuserName" type="string" value=""/>
+      <field id="proxyPassword" type="password"/>
+      <field id="connectionTimeout" type="integer"/>
+      <field id="readTimeout" type="integer" value="1000"/>
+    </GenericConnectionConfig>
+  </bns:object>
+</bns:Component>
