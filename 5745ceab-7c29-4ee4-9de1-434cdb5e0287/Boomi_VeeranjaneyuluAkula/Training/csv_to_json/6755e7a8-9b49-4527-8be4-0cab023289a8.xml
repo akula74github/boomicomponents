@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/Training/csv_to_json" componentId="6755e7a8-9b49-4527-8be4-0cab023289a8" version="2" name="CSV2JSON" type="transform.map" createdDate="2019-12-18T13:42:50Z" createdBy="ajay.natarajan@dell.com" modifiedDate="2021-03-01T14:26:19Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="csv_to_json" folderId="RjoyOTc1NDg2">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <Map xmlns="" fromProfile="c3a2c776-4112-4259-8877-eb90a361f99c" toProfile="27824fa9-4ee1-4e90-9d01-49e5b14dbea1">
+      <Mappings>
+        <Mapping fromKey="3" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='3']" fromNamePath="Record/Elements/Region" fromType="profile" toKey="20" toKeyPath="*[@key='1']/*[@key='19']/*[@key='20']" toNamePath="Root/Object/Region" toType="profile"/>
+        <Mapping fromKey="4" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='4']" fromNamePath="Record/Elements/Country" fromType="profile" toKey="21" toKeyPath="*[@key='1']/*[@key='19']/*[@key='21']" toNamePath="Root/Object/Country" toType="profile"/>
+        <Mapping fromKey="5" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='5']" fromNamePath="Record/Elements/Item Type" fromType="profile" toFunction="2" toKey="1" toType="function"/>
+        <Mapping fromFunction="2" fromKey="1" fromType="function" toKey="22" toKeyPath="*[@key='1']/*[@key='19']/*[@key='22']" toNamePath="Root/Object/Item Type" toType="profile"/>
+        <Mapping fromKey="6" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='6']" fromNamePath="Record/Elements/Sales Channel" fromType="profile" toKey="23" toKeyPath="*[@key='1']/*[@key='19']/*[@key='23']" toNamePath="Root/Object/Sales Channel" toType="profile"/>
+        <Mapping fromKey="7" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='7']" fromNamePath="Record/Elements/Order Priority" fromType="profile" toKey="24" toKeyPath="*[@key='1']/*[@key='19']/*[@key='24']" toNamePath="Root/Object/Order Priority" toType="profile"/>
+        <Mapping fromKey="8" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='8']" fromNamePath="Record/Elements/Order Date" fromType="profile" toKey="25" toKeyPath="*[@key='1']/*[@key='19']/*[@key='25']" toNamePath="Root/Object/Order Date" toType="profile"/>
+        <Mapping fromKey="9" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='9']" fromNamePath="Record/Elements/Order ID" fromType="profile" toKey="26" toKeyPath="*[@key='1']/*[@key='19']/*[@key='26']" toNamePath="Root/Object/Order ID" toType="profile"/>
+        <Mapping fromKey="10" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='10']" fromNamePath="Record/Elements/Ship Date" fromType="profile" toKey="27" toKeyPath="*[@key='1']/*[@key='19']/*[@key='27']" toNamePath="Root/Object/Ship Date" toType="profile"/>
+        <Mapping fromKey="11" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='11']" fromNamePath="Record/Elements/Units Sold" fromType="profile" toKey="28" toKeyPath="*[@key='1']/*[@key='19']/*[@key='28']" toNamePath="Root/Object/Units Sold" toType="profile"/>
+        <Mapping fromKey="12" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='12']" fromNamePath="Record/Elements/Unit Price" fromType="profile" toKey="29" toKeyPath="*[@key='1']/*[@key='19']/*[@key='29']" toNamePath="Root/Object/Unit Price" toType="profile"/>
+        <Mapping fromKey="13" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='13']" fromNamePath="Record/Elements/Unit Cost" fromType="profile" toKey="30" toKeyPath="*[@key='1']/*[@key='19']/*[@key='30']" toNamePath="Root/Object/Unit Cost" toType="profile"/>
+        <Mapping fromKey="14" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='14']" fromNamePath="Record/Elements/Total Revenue" fromType="profile" toKey="31" toKeyPath="*[@key='1']/*[@key='19']/*[@key='31']" toNamePath="Root/Object/Total Revenue" toType="profile"/>
+        <Mapping fromKey="15" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='15']" fromNamePath="Record/Elements/Total Cost" fromType="profile" toKey="32" toKeyPath="*[@key='1']/*[@key='19']/*[@key='32']" toNamePath="Root/Object/Total Cost" toType="profile"/>
+        <Mapping fromKey="16" fromKeyPath="*[@key='1']/*[@key='2']/*[@key='16']" fromNamePath="Record/Elements/Total Profit" fromType="profile" toKey="33" toKeyPath="*[@key='1']/*[@key='19']/*[@key='33']" toNamePath="Root/Object/Total Profit" toType="profile"/>
+      </Mappings>
+      <Functions optimizeExecutionOrder="true">
+        <FunctionStep category="userdefined" id="ecb3d7f7-c731-41ac-902e-15a7dd4971ea" key="2" name="New Map Function" position="2" type="userdefined" x="30.0" y="611.0">
+          <Inputs>
+            <Input key="1" name="InA"/>
+          </Inputs>
+          <Outputs>
+            <Output key="1" name="OutA"/>
+          </Outputs>
+          <Configuration/>
+        </FunctionStep>
+      </Functions>
+      <Defaults/>
+      <DocumentCacheJoins/>
+    </Map>
+  </bns:object>
+</bns:Component>

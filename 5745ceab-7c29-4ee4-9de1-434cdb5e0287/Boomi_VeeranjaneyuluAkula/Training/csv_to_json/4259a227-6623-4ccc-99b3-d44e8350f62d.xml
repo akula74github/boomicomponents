@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/Training/csv_to_json" componentId="4259a227-6623-4ccc-99b3-d44e8350f62d" version="1" name="load" type="connector-action" subType="disk" createdDate="2019-12-18T13:42:50Z" createdBy="ajay.natarajan@dell.com" modifiedDate="2019-12-18T13:42:50Z" modifiedBy="ajay.natarajan@dell.com" deleted="false" currentVersion="true" folderName="csv_to_json" folderId="RjoyOTc1NDg2" copiedFromComponentId="af521b27-9945-4f61-9ef9-21f3616293f8" copiedFromComponentVersion="2">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <Operation xmlns="">
+      <Archiving directory="" enabled="false"/>
+      <Configuration>
+        <DiskGetAction deleteAfterRead="true" failIfUnableToDelete="false" fileFilter="*.csv" filterMatchType="wildcard" maxFileCount="5"/>
+      </Configuration>
+      <Tracking>
+        <TrackedFields/>
+      </Tracking>
+      <Caching/>
+    </Operation>
+  </bns:object>
+</bns:Component>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/Training/csv_to_json" componentId="7cf749c3-ace8-465c-b08e-9c1ed6d903af" version="2" name="out" type="connector-settings" subType="disk" createdDate="2019-12-18T13:42:50Z" createdBy="ajay.natarajan@dell.com" modifiedDate="2019-12-18T15:22:09Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="csv_to_json" folderId="RjoyOTc1NDg2">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <DiskSettings xmlns="" directory="/opt/boomi/molecule/files/out"/>
+  </bns:object>
+</bns:Component>
