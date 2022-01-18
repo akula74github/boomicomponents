@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula" componentId="46262896-6ca9-4a79-a81f-53ce31c23e2f" version="13" name="Multipart - Form -Post - Parameters" type="process" createdDate="2020-06-17T22:55:55Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2020-06-26T21:19:23Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="Boomi_VeeranjaneyuluAkula" folderId="RjoxNzQ3MzM3">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <process xmlns="" allowSimultaneous="true" enableUserLog="false" processLogOnErrorOnly="false" purgeDataImmediately="false" updateRunDates="false" workload="general">
+      <shapes>
+        <shape image="start" name="shape1" shapetype="start" userlabel="" x="48.0" y="48.0">
+          <configuration>
+            <connectoraction actionType="Listen" allowDynamicCredentials="NONE" connectorType="wss" hideSettings="true" operationId="b510cee6-c3ab-43c2-913d-c52400231d72">
+              <parameters/>
+            </connectoraction>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape4" x="224.0" y="57.0">
+              <linesegment length="0" name="shape1.dragpoint1.lineseg1" orient="horizontal" x="82.0" y="63.0"/>
+              <linesegment length="0" name="shape1.dragpoint1.lineseg2" orient="vertical" x="82.0" y="63.0"/>
+              <linesegment length="79" name="shape1.dragpoint1.lineseg3" orient="horizontal" x="82.0" y="63.0"/>
+              <linesegment length="0" name="shape1.dragpoint1.lineseg4" orient="vertical" x="161.0" y="63.0"/>
+              <linesegment length="63" name="shape1.dragpoint1.lineseg5" orient="horizontal" x="161.0" y="63.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="message_icon" name="shape2" shapetype="message" userlabel="" x="624.0" y="48.0">
+          <configuration>
+            <message combined="false">
+              <msgTxt>{1}</msgTxt>
+              <msgParameters>
+                <parametervalue key="0" valueType="current">
+                  <trackparameter/>
+                </parametervalue>
+              </msgParameters>
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape2.dragpoint1" toShape="shape7" x="784.0" y="57.0">
+              <linesegment length="0" name="shape2.dragpoint1.lineseg1" orient="horizontal" x="658.0" y="63.0"/>
+              <linesegment length="0" name="shape2.dragpoint1.lineseg2" orient="vertical" x="658.0" y="63.0"/>
+              <linesegment length="71" name="shape2.dragpoint1.lineseg3" orient="horizontal" x="658.0" y="63.0"/>
+              <linesegment length="0" name="shape2.dragpoint1.lineseg4" orient="vertical" x="729.0" y="63.0"/>
+              <linesegment length="55" name="shape2.dragpoint1.lineseg5" orient="horizontal" x="729.0" y="63.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="dataprocess_icon" name="shape3" shapetype="dataprocess" userlabel="" x="432.0" y="48.0">
+          <configuration>
+            <dataprocess>
+              <step index="1" key="1" name="Map Multipart Form Data MIME to JSON" processtype="15">
+                <dataprocessmimeparse documentCacheId="80dc8c85-3c39-42ee-81b5-04c43045c86e" profileVariant="OBJECT"/>
+              </step>
+            </dataprocess>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape3.dragpoint1" toShape="shape2" x="608.0" y="57.0">
+              <linesegment length="0" name="shape3.dragpoint1.lineseg1" orient="horizontal" x="466.0" y="63.0"/>
+              <linesegment length="0" name="shape3.dragpoint1.lineseg2" orient="vertical" x="466.0" y="63.0"/>
+              <linesegment length="79" name="shape3.dragpoint1.lineseg3" orient="horizontal" x="466.0" y="63.0"/>
+              <linesegment length="0" name="shape3.dragpoint1.lineseg4" orient="vertical" x="545.0" y="63.0"/>
+              <linesegment length="63" name="shape3.dragpoint1.lineseg5" orient="horizontal" x="545.0" y="63.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="branch_icon" name="shape4" shapetype="branch" userlabel="" x="240.0" y="48.0">
+          <configuration>
+            <branch numBranches="2"/>
+          </configuration>
+          <dragpoints>
+            <dragpoint identifier="1" name="shape4.dragpoint1" text="1" toShape="shape3" x="416.0" y="57.0">
+              <linesegment length="0" name="shape4.dragpoint1.lineseg1" orient="horizontal" x="274.0" y="63.0"/>
+              <linesegment length="0" name="shape4.dragpoint1.lineseg2" orient="vertical" x="274.0" y="63.0"/>
+              <linesegment length="79" name="shape4.dragpoint1.lineseg3" orient="horizontal" x="274.0" y="63.0"/>
+              <linesegment length="0" name="shape4.dragpoint1.lineseg4" orient="vertical" x="353.0" y="63.0"/>
+              <linesegment label="1" length="63" name="shape4.dragpoint1.lineseg5" orient="horizontal" x="353.0" y="63.0"/>
+            </dragpoint>
+            <dragpoint identifier="2" name="shape4.dragpoint2" text="2" toShape="shape5" x="416.0" y="217.0">
+              <linesegment length="0" name="shape4.dragpoint2.lineseg1" orient="horizontal" x="274.0" y="63.0"/>
+              <linesegment length="0" name="shape4.dragpoint2.lineseg2" orient="vertical" x="274.0" y="63.0"/>
+              <linesegment length="79" name="shape4.dragpoint2.lineseg3" orient="horizontal" x="274.0" y="63.0"/>
+              <linesegment length="160" name="shape4.dragpoint2.lineseg4" orient="vertical" x="353.0" y="63.0"/>
+              <linesegment label="2" length="63" name="shape4.dragpoint2.lineseg5" orient="horizontal" x="353.0" y="223.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="doccacheretrieve_icon" name="shape5" shapetype="doccacheretrieve" userlabel="" x="432.0" y="208.0">
+          <configuration>
+            <doccacheretrieve docCache="80dc8c85-3c39-42ee-81b5-04c43045c86e" loadAllDoc="true">
+              <cacheKeyValues/>
+            </doccacheretrieve>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape5.dragpoint1" toShape="shape9" x="608.0" y="217.0">
+              <linesegment length="0" name="shape5.dragpoint1.lineseg1" orient="horizontal" x="466.0" y="223.0"/>
+              <linesegment length="0" name="shape5.dragpoint1.lineseg2" orient="vertical" x="466.0" y="223.0"/>
+              <linesegment length="79" name="shape5.dragpoint1.lineseg3" orient="horizontal" x="466.0" y="223.0"/>
+              <linesegment length="0" name="shape5.dragpoint1.lineseg4" orient="vertical" x="545.0" y="223.0"/>
+              <linesegment length="63" name="shape5.dragpoint1.lineseg5" orient="horizontal" x="545.0" y="223.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="stop_icon" name="shape7" shapetype="stop" userlabel="" x="800.0" y="48.0">
+          <configuration>
+            <stop continue="true"/>
+          </configuration>
+          <dragpoints/>
+        </shape>
+        <shape image="returndocuments_icon" name="shape8" shapetype="returndocuments" userlabel="" x="816.0" y="208.0">
+          <configuration>
+            <returndocuments label=""/>
+          </configuration>
+          <dragpoints/>
+        </shape>
+        <shape image="message_icon" name="shape9" shapetype="message" userlabel="" x="624.0" y="208.0">
+          <configuration>
+            <message combined="false">
+              <msgTxt>{1}</msgTxt>
+              <msgParameters>
+                <parametervalue key="0" valueType="current"/>
+              </msgParameters>
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape9.dragpoint1" toShape="shape8" x="800.0" y="217.0">
+              <linesegment length="0" name="shape9.dragpoint1.lineseg1" orient="horizontal" x="658.0" y="223.0"/>
+              <linesegment length="0" name="shape9.dragpoint1.lineseg2" orient="vertical" x="658.0" y="223.0"/>
+              <linesegment length="79" name="shape9.dragpoint1.lineseg3" orient="horizontal" x="658.0" y="223.0"/>
+              <linesegment length="0" name="shape9.dragpoint1.lineseg4" orient="vertical" x="737.0" y="223.0"/>
+              <linesegment length="63" name="shape9.dragpoint1.lineseg5" orient="horizontal" x="737.0" y="223.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+      </shapes>
+    </process>
+  </bns:object>
+  <bns:processOverrides/>
+</bns:Component>

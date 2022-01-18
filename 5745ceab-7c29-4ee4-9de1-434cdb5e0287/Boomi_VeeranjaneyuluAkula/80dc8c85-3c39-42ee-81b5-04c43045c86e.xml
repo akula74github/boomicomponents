@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula" componentId="80dc8c85-3c39-42ee-81b5-04c43045c86e" version="1" name="Mime Cache" type="documentcache" createdDate="2020-06-24T18:57:46Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2020-06-24T18:57:46Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="Boomi_VeeranjaneyuluAkula" folderId="RjoxNzQ3MzM3">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <DocumentCache xmlns="" enforceSingleLucene="true" profileType="profile.none">
+      <CacheIndex indexId="1" indexName="Unnamed">
+        <cacheKey alias="MIME Property - Mime Document" defaultValue="" id="2" propertyId="mime.mimedocument" propertyName="MIME Property - Mime Document" xsi:type="DocumentPropertyKeyConfig"/>
+        <cacheKey alias="MIME Property - Name" defaultValue="" id="3" propertyId="mime.name" propertyName="MIME Property - Name" xsi:type="DocumentPropertyKeyConfig"/>
+      </CacheIndex>
+    </DocumentCache>
+  </bns:object>
+</bns:Component>

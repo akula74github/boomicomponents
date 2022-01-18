@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/Training/csv_to_json" componentId="5745ceab-7c29-4ee4-9de1-434cdb5e0287" version="8" name="csv2json" type="process" createdDate="2019-12-18T13:42:50Z" createdBy="ajay.natarajan@dell.com" modifiedDate="2022-01-18T18:42:02Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="csv_to_json" folderId="RjoyOTc1NDg2">
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/Training/csv_to_json" componentId="5745ceab-7c29-4ee4-9de1-434cdb5e0287" version="10" name="csv2json" type="process" createdDate="2019-12-18T13:42:50Z" createdBy="ajay.natarajan@dell.com" modifiedDate="2022-01-18T18:46:46Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="csv_to_json" folderId="RjoyOTc1NDg2">
   <bns:encryptedValues/>
-  <bns:description>Added Description to test sonar rule - update3- sonar rule update</bns:description>
+  <bns:description>Added Description to test sonar rule - update3- sonar rule update - No Framework Process</bns:description>
   <bns:object>
     <process xmlns="" allowSimultaneous="false" enableUserLog="false" processLogOnErrorOnly="false" purgeDataImmediately="true" updateRunDates="true" workload="general">
       <shapes>
@@ -130,20 +130,20 @@
         </shape>
         <shape image="processcall_icon" name="shape11" shapetype="processcall" userlabel="" x="432.0" y="48.0">
           <configuration>
-            <processcall abort="true" processId="33d2f6ef-c73f-4a77-b2ae-06d2f67f88fe" wait="true">
+            <processcall abort="true" processId="46262896-6ca9-4a79-a81f-53ce31c23e2f" wait="true">
               <parameters/>
               <returnpaths>
-                <returnpaths childShapeName="shape4" returnLabel=""/>
+                <returnpaths childShapeName="shape8" returnLabel=""/>
               </returnpaths>
             </processcall>
           </configuration>
           <dragpoints>
-            <dragpoint identifier="shape4" name="shape11.dragpoint1" toShape="shape14" x="624.0" y="57.0">
+            <dragpoint identifier="shape8" name="shape11.dragpoint1" toShape="shape15" x="576.0" y="57.0">
               <linesegment length="0" name="shape11.dragpoint1.lineseg1" orient="horizontal" x="466.0" y="63.0"/>
               <linesegment length="0" name="shape11.dragpoint1.lineseg2" orient="vertical" x="466.0" y="63.0"/>
-              <linesegment length="87" name="shape11.dragpoint1.lineseg3" orient="horizontal" x="466.0" y="63.0"/>
-              <linesegment length="0" name="shape11.dragpoint1.lineseg4" orient="vertical" x="553.0" y="63.0"/>
-              <linesegment length="71" name="shape11.dragpoint1.lineseg5" orient="horizontal" x="553.0" y="63.0"/>
+              <linesegment length="63" name="shape11.dragpoint1.lineseg3" orient="horizontal" x="466.0" y="63.0"/>
+              <linesegment length="0" name="shape11.dragpoint1.lineseg4" orient="vertical" x="529.0" y="63.0"/>
+              <linesegment length="47" name="shape11.dragpoint1.lineseg5" orient="horizontal" x="529.0" y="63.0"/>
             </dragpoint>
           </dragpoints>
         </shape>
@@ -181,7 +181,7 @@
           </configuration>
           <dragpoints/>
         </shape>
-        <shape image="stop_icon" name="shape14" shapetype="stop" userlabel="" x="640.0" y="48.0">
+        <shape image="stop_icon" name="shape15" shapetype="stop" userlabel="" x="592.0" y="48.0">
           <configuration>
             <stop continue="true"/>
           </configuration>

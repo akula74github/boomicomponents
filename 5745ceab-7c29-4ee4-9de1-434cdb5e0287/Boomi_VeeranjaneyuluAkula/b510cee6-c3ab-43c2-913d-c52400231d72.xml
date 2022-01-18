@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula" componentId="b510cee6-c3ab-43c2-913d-c52400231d72" version="6" name="OB Mutltiple-form-post Operation" type="connector-action" subType="wss" createdDate="2020-06-24T18:17:46Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2020-06-26T21:22:42Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="Boomi_VeeranjaneyuluAkula" folderId="RjoxNzQ3MzM3">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <Operation xmlns="">
+      <Archiving directory="" enabled="false"/>
+      <Configuration>
+        <WebServicesServerListenAction attachmentCache="80dc8c85-3c39-42ee-81b5-04c43045c86e" inputType="multipart" objectName="OBCall" operationType="EXECUTE" outputType="singledata" responseContentType="text/plain"/>
+      </Configuration>
+      <Tracking>
+        <TrackedFields/>
+      </Tracking>
+      <Caching/>
+    </Operation>
+  </bns:object>
+</bns:Component>
