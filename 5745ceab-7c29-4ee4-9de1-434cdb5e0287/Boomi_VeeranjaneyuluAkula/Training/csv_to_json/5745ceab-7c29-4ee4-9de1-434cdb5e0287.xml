@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/Training/csv_to_json" componentId="5745ceab-7c29-4ee4-9de1-434cdb5e0287" version="6" name="csv2json" type="process" createdDate="2019-12-18T13:42:50Z" createdBy="ajay.natarajan@dell.com" modifiedDate="2022-01-18T18:31:58Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="csv_to_json" folderId="RjoyOTc1NDg2">
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/Training/csv_to_json" componentId="5745ceab-7c29-4ee4-9de1-434cdb5e0287" version="7" name="csv2json" type="process" createdDate="2019-12-18T13:42:50Z" createdBy="ajay.natarajan@dell.com" modifiedDate="2022-01-18T18:38:30Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="csv_to_json" folderId="RjoyOTc1NDg2">
   <bns:encryptedValues/>
-  <bns:description>Added Description to test sonar rule - update</bns:description>
+  <bns:description>Added Description to test sonar rule - update2- sonar rule update</bns:description>
   <bns:object>
     <process xmlns="" allowSimultaneous="false" enableUserLog="false" processLogOnErrorOnly="false" purgeDataImmediately="true" updateRunDates="true" workload="general">
       <shapes>
