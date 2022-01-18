@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/# (Common) Error &amp; Exception Handling/Error Handling/Error Handling Part1 (Capture and Send Error to Atom Queue)" componentId="33d2f6ef-c73f-4a77-b2ae-06d2f67f88fe" version="3" name="[SUB] Metadata Collection Service" type="process" createdDate="2020-10-27T14:14:43Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2022-01-18T16:43:18Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="Error Handling Part1 (Capture and Send Error to Atom Queue)" folderId="RjozNjE2MDQz">
+  <bns:encryptedValues/>
+  <bns:description>EFW - Meta Data Collection Service</bns:description>
+  <bns:object>
+    <process xmlns="" allowSimultaneous="true" enableUserLog="false" processLogOnErrorOnly="false" purgeDataImmediately="false" updateRunDates="false" workload="general">
+      <shapes>
+        <shape image="start" name="shape1" shapetype="start" userlabel="" x="96.0" y="96.0">
+          <configuration>
+            <passthroughaction/>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape2" x="256.0" y="105.0">
+              <linesegment length="0" name="shape1.dragpoint1.lineseg1" orient="horizontal" x="130.0" y="111.0"/>
+              <linesegment length="0" name="shape1.dragpoint1.lineseg2" orient="vertical" x="130.0" y="111.0"/>
+              <linesegment length="71" name="shape1.dragpoint1.lineseg3" orient="horizontal" x="130.0" y="111.0"/>
+              <linesegment length="0" name="shape1.dragpoint1.lineseg4" orient="vertical" x="201.0" y="111.0"/>
+              <linesegment length="55" name="shape1.dragpoint1.lineseg5" orient="horizontal" x="201.0" y="111.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="dataprocess_icon" name="shape2" shapetype="dataprocess" userlabel="Process Name, Execution Id and Atom ID" x="272.0" y="96.0">
+          <configuration>
+            <dataprocess>
+              <step index="1" key="1" name="Custom Scripting" processtype="12">
+                <dataprocessscript language="groovy">
+                  <script>/**&#13;
+* Description: Sets the current Process Name, Execution Id and Atom ID&#13;
+* as Dynamic Process Properties. Intended for debugging or status purposes.&#13;
+*&#13;
+* Input: None&#13;
+*&#13;
+* Output:&#13;
+*        BOOMI_PROCESS_NAME&#13;
+*        BOOMI_EXECUTION_ID&#13;
+*        BOOMI_ATOM_ID&#13;
+**/&#13;
+ &#13;
+import com.boomi.execution.ExecutionUtil; &#13;
+import com.boomi.execution.ExecutionManager;&#13;
+ &#13;
+for( int i = 0; i &lt; dataContext.getDataCount(); i++ ) {&#13;
+  InputStream is = dataContext.getStream(i);&#13;
+  Properties props = dataContext.getProperties(i);&#13;
+ &#13;
+  dataContext.storeStream(is, props);&#13;
+}&#13;
+ &#13;
+// get the process name&#13;
+def processName = ExecutionManager.getCurrent().getProcessName();&#13;
+ &#13;
+if(ExecutionManager.getCurrent().getParent() != null){&#13;
+    processName = ExecutionManager.getCurrent().getParent().getProcessName();&#13;
+}&#13;
+ExecutionUtil.setDynamicProcessProperty('BOOMI_PROCESS_NAME',processName,false);&#13;
+ &#13;
+// get the execution ID&#13;
+def executionId =  ExecutionManager.getCurrent().getTopLevelExecutionId();&#13;
+ExecutionUtil.setDynamicProcessProperty('BOOMI_EXECUTION_ID',executionId,false);&#13;
+ &#13;
+// Set the origin Atom ID - information&#13;
+ExecutionUtil.setDynamicProcessProperty('BOOMI_ATOM_ID',ExecutionUtil.getContainerId(),false);&#13;
+</script>
+                </dataprocessscript>
+              </step>
+            </dataprocess>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape2.dragpoint1" toShape="shape4" x="512.0" y="105.0">
+              <linesegment length="0" name="shape2.dragpoint1.lineseg1" orient="horizontal" x="306.0" y="111.0"/>
+              <linesegment length="0" name="shape2.dragpoint1.lineseg2" orient="vertical" x="306.0" y="111.0"/>
+              <linesegment length="111" name="shape2.dragpoint1.lineseg3" orient="horizontal" x="306.0" y="111.0"/>
+              <linesegment length="0" name="shape2.dragpoint1.lineseg4" orient="vertical" x="417.0" y="111.0"/>
+              <linesegment length="95" name="shape2.dragpoint1.lineseg5" orient="horizontal" x="417.0" y="111.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="stop_icon" name="shape3" shapetype="stop" userlabel="" x="720.0" y="160.0">
+          <configuration>
+            <stop continue="true"/>
+          </configuration>
+          <dragpoints/>
+        </shape>
+        <shape image="returndocuments_icon" name="shape4" shapetype="returndocuments" userlabel="" x="528.0" y="96.0">
+          <configuration>
+            <returndocuments label=""/>
+          </configuration>
+          <dragpoints/>
+        </shape>
+      </shapes>
+    </process>
+  </bns:object>
+  <bns:processOverrides/>
+</bns:Component>
