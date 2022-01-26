@@ -4,7 +4,43 @@
     "@type": "EnvironmentExtensions",
     "connections": {
       "@type": "Connections",
-      "connection": []
+      "connection": [
+        {
+          "@type": "Connection",
+          "field": [
+            {
+              "@type": "field",
+              "id": "host",
+              "value": "",
+              "usesEncryption": "false",
+              "useDefault": false
+            },
+            {
+              "@type": "field",
+              "id": "username",
+              "value": "",
+              "usesEncryption": "false",
+              "useDefault": false
+            },
+            {
+              "@type": "field",
+              "id": "password",
+              "value": "#{}#",
+              "usesEncryption": "true",
+              "useDefault": false
+            },
+            {
+              "@type": "field",
+              "id": "port",
+              "value": "",
+              "usesEncryption": "false",
+              "useDefault": false
+            }
+          ],
+          "id": "fcbb6ce8-0247-488d-8fad-05c242770c99",
+          "name": " cloud production connection"
+        }
+      ]
     },
     "processProperties": {
       "@type": "OverrideProcessProperties",
@@ -12,13 +48,7 @@
     },
     "properties": {
       "@type": "",
-      "property": [
-        {
-          "@type": "",
-          "name": "DPP_TEST_BATCH_SIZE",
-          "value": ""
-        }
-      ]
+      "property": []
     },
     "environmentId": "",
     "partial": "true",

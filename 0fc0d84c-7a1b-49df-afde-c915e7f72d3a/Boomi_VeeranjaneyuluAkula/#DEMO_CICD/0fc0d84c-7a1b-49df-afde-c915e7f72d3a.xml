@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/#DEMO_CICD" componentId="0fc0d84c-7a1b-49df-afde-c915e7f72d3a" version="1" name="Create " type="process" createdDate="2021-12-17T20:13:26Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2021-12-17T20:13:26Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="#DEMO_CICD" folderId="Rjo0NDc2OTAy" copiedFromComponentId="333b856a-a431-4c45-9377-d4c897427081" copiedFromComponentVersion="1">
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/#DEMO_CICD" componentId="0fc0d84c-7a1b-49df-afde-c915e7f72d3a" version="3" name="Create" type="process" createdDate="2021-12-17T20:13:26Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2022-01-26T18:35:48Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="#DEMO_CICD" folderId="Rjo0NDc2OTAy">
   <bns:encryptedValues/>
   <bns:description>Connection tab helps to provide the SFTP server information from which we need to retrieve the files, here we will be providing the server host and authentication details, authentication type using which the server should get connected will be provided in connection tab</bns:description>
   <bns:object>
@@ -91,5 +91,50 @@
       </shapes>
     </process>
   </bns:object>
-  <bns:processOverrides/>
+  <bns:processOverrides>
+    <Overrides xmlns="">
+      <Connections>
+        <ConnectionOverride id="fcbb6ce8-0247-488d-8fad-05c242770c99">
+          <field id="authType" label="Authentication Type" overrideable="false"/>
+          <field id="remoteDirectory" label="Remote Directory" overrideable="false"/>
+          <field id="host" label="Host" overrideable="true"/>
+          <field id="username" label="User Name" overrideable="true"/>
+          <field id="password" label="Password" overrideable="true"/>
+          <field id="port" label="Port" overrideable="true"/>
+          <field id="keyPath" label="Client SSH Key File Path" overrideable="false"/>
+          <field id="keyPswrd" label="Key File Password" overrideable="false"/>
+          <field id="hostEntry" label="Known Host Entry" overrideable="false"/>
+          <field id="isMaxExchange" label="Use Max Key Exchange size of 1024" overrideable="false"/>
+          <field id="prvkeyContent" label="Private Key Content" overrideable="false"/>
+          <field id="pubkeyContent" label="Public Key Content" overrideable="false"/>
+          <field id="keyPairName" label="Key Pair Name" overrideable="false"/>
+          <field id="useKeyContent" label="Use Keys' content for authentication" overrideable="false"/>
+          <field id="proxyEnable" label="Use Proxy" overrideable="false"/>
+          <field id="proxyType" label="Choose Proxy Type" overrideable="false"/>
+          <field id="proxyHost" label="Proxy Host" overrideable="false"/>
+          <field id="proxyPort" label="Proxy Port" overrideable="false"/>
+          <field id="proxyuserName" label="Proxy Username" overrideable="false"/>
+          <field id="proxyPassword" label="Proxy Password" overrideable="false"/>
+          <field id="connectionTimeout" label="Connection Timeout (ms)" overrideable="false"/>
+          <field id="readTimeout" label="Read Timeout (ms)" overrideable="false"/>
+        </ConnectionOverride>
+      </Connections>
+      <PartnerOverrides/>
+      <Properties/>
+      <Extensions>
+        <ObjectDefinitions>
+          <objectDefinition connectionId="fcbb6ce8-0247-488d-8fad-05c242770c99" connectorType="officialboomi-X3979C-sftpv2-prod" id="fcbb6ce8-0247-488d-8fad-05c242770c99File" name="SFTP V2 File ( cloud production connection)" objectType="File" userDefined="false">
+            <profiles/>
+          </objectDefinition>
+          <unusedProfiles/>
+        </ObjectDefinitions>
+        <DataMaps>
+          <unusedMaps/>
+        </DataMaps>
+      </Extensions>
+      <CrossReferenceOverrides/>
+      <PGPOverrides/>
+      <DefinedProcessPropertyOverrides/>
+    </Overrides>
+  </bns:processOverrides>
 </bns:Component>
