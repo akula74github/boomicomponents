@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/# My Training" componentId="54d191c8-52c9-419a-b005-b75655cbe187" version="1" name="MLLP Queue Send Operation" type="connector-action" subType="queue" createdDate="2022-01-24T15:09:24Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2022-01-24T15:09:24Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="# My Training" folderId="Rjo0MDg2NjE2">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <Operation xmlns="">
+      <Archiving directory="" enabled="false"/>
+      <Configuration>
+        <QueueSendAction batchSize="5"/>
+      </Configuration>
+      <Tracking>
+        <TrackedFields/>
+      </Tracking>
+      <Caching/>
+    </Operation>
+  </bns:object>
+</bns:Component>

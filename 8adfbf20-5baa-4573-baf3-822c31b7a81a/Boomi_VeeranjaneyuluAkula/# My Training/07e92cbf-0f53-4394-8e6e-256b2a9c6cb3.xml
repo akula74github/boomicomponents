@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/# My Training" componentId="07e92cbf-0f53-4394-8e6e-256b2a9c6cb3" version="3" name="MLLP Listen Operation" type="connector-action" subType="mllpserver" createdDate="2022-01-24T15:06:13Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2022-01-24T15:22:26Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="# My Training" folderId="Rjo0MDg2NjE2">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <Operation xmlns="">
+      <Archiving directory="" enabled="false"/>
+      <Configuration>
+        <MLLPServerListenAction logMessages="true" returnAcceptAck="true">
+          <MLLPPartnerGroup>
+            <myCompanyInfo applicationId="SOMEAPP" facilityId="SOMEFACILITY"/>
+            <myPartnerInfo applicationId="COOLAPP" facilityId="FOOBARINC"/>
+          </MLLPPartnerGroup>
+        </MLLPServerListenAction>
+      </Configuration>
+      <Tracking>
+        <TrackedFields/>
+      </Tracking>
+      <Caching/>
+    </Operation>
+  </bns:object>
+</bns:Component>

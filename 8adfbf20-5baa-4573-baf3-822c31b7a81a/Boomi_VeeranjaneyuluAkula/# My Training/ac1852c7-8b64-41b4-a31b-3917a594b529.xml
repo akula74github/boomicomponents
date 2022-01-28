@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/# My Training" componentId="ac1852c7-8b64-41b4-a31b-3917a594b529" version="2" name="MLLP MSG Queue Connection" type="connector-settings" subType="queue" createdDate="2022-01-24T15:08:14Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2022-01-24T15:08:37Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="# My Training" folderId="Rjo0MDg2NjE2">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <QueueSettings xmlns="">
+      <queueComponentId>7035a96b-6e92-44b2-a484-e8f1b891939c</queueComponentId>
+    </QueueSettings>
+  </bns:object>
+</bns:Component>
