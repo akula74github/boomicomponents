@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/Process Library" componentId="2b5f41f3-a3d1-470a-80c1-4d1f8a588e67" version="2" name="Atom Health API" type="webservice" createdDate="2022-02-07T16:05:29Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2022-02-09T00:20:10Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="Process Library" folderId="RjoxNzQ3MzM4">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <webservice xmlns="" urlPath="ubatom">
+      <restApi>
+        <route processId="8a4a3ba7-b8d1-4374-8139-dcddebf59bd4">
+          <overrides inputProfileKey="" objectName="" outputProfileKey=""/>
+        </route>
+      </restApi>
+      <soapApi fullEnvelopePassthrough="false" singleWsdlSchema="false" suppressWrappers="false" wsdlNamespace="" wsdlServiceName="">
+        <SOAPVersion>SOAP_1_1</SOAPVersion>
+      </soapApi>
+      <odataApi/>
+      <metaInfo contactEmail="" contactName="" contactUrl="" licenseName="" licenseUrl="" title="Atom Health API" version="v1">
+        <description>Testing CICD for the Deploy Packages job</description>
+        <termsOfService/>
+      </metaInfo>
+      <profileOverrides/>
+      <capturedHeaders/>
+      <apiRoles/>
+    </webservice>
+  </bns:object>
+</bns:Component>
