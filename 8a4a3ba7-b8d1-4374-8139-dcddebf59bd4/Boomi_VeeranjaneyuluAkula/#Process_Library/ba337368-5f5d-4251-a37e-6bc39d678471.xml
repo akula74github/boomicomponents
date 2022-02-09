@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/#Process_Library" componentId="ba337368-5f5d-4251-a37e-6bc39d678471" version="1" name="(Sub) COMMON Get Execution Context Props" type="process" createdDate="2022-01-20T18:09:46Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2022-01-20T18:09:46Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="#Process_Library" folderId="RjoyODc1OTc0" copiedFromComponentId="2d357f64-8f55-48c5-8b9e-419686a51ee0" copiedFromComponentVersion="3">
+  <bns:encryptedValues/>
+  <bns:description>Utility subprocess to set dynamic process properties for various execution values such as process name and execution ID. Used primarily for operational monitoring. Documents are returned unmodified.</bns:description>
+  <bns:object>
+    <process xmlns="" allowSimultaneous="false" enableUserLog="false" processLogOnErrorOnly="false" updateRunDates="false" workload="general">
+      <shapes>
+        <shape image="start" name="shape1" shapetype="start" userlabel="" x="96.0" y="96.0">
+          <configuration>
+            <passthroughaction/>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape2" x="224.0" y="105.0">
+              <linesegment length="0" name="shape1.dragpoint1.lineseg1" orient="horizontal" x="130.0" y="111.0"/>
+              <linesegment length="0" name="shape1.dragpoint1.lineseg2" orient="vertical" x="130.0" y="111.0"/>
+              <linesegment length="55" name="shape1.dragpoint1.lineseg3" orient="horizontal" x="130.0" y="111.0"/>
+              <linesegment length="0" name="shape1.dragpoint1.lineseg4" orient="vertical" x="185.0" y="111.0"/>
+              <linesegment length="39" name="shape1.dragpoint1.lineseg5" orient="horizontal" x="185.0" y="111.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="dataprocess_icon" name="shape2" shapetype="dataprocess" userlabel="CS: Set System Values DPPs" x="240.0" y="96.0">
+          <configuration>
+            <dataprocess>
+              <step index="1" key="1" name="Custom Scripting" processtype="12">
+                <dataprocessscript language="groovy">
+                  <script>/**
+* Description: Sets the current Process Name, Execution ID and Atom ID
+* as Dynamic Process Properties. Intended for debugging or status purposes.
+*
+* Input: None
+*
+* Output:
+*        BOOMI_PROCESS_NAME
+*        BOOMI_EXECUTION_ID
+*        BOOMI_ATOM_ID
+**/
+
+import com.boomi.execution.ExecutionUtil; 
+import com.boomi.execution.ExecutionManager;
+
+for( int i = 0; i &lt; dataContext.getDataCount(); i++ ) {
+  InputStream is = dataContext.getStream(i);
+  Properties props = dataContext.getProperties(i);
+
+  dataContext.storeStream(is, props);
+}
+
+// get the process name
+def processName = ExecutionManager.getCurrent().getProcessName();
+
+if(ExecutionManager.getCurrent().getParent() != null){
+    processName = ExecutionManager.getCurrent().getParent().getProcessName();
+}
+ExecutionUtil.setDynamicProcessProperty('BOOMI_PROCESS_NAME', processName, false);
+
+// get the execution ID
+def executionId = ExecutionManager.getCurrent().getTopLevelExecutionId();
+ExecutionUtil.setDynamicProcessProperty('BOOMI_EXECUTION_ID', executionId, false);
+
+// Set the origin Atom ID - information
+ExecutionUtil.setDynamicProcessProperty('BOOMI_ATOM_ID', ExecutionUtil.getContainerId(), false);
+</script>
+                </dataprocessscript>
+              </step>
+            </dataprocess>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape2.dragpoint1" toShape="shape3" x="416.0" y="105.0">
+              <linesegment length="0" name="shape2.dragpoint1.lineseg1" orient="horizontal" x="274.0" y="111.0"/>
+              <linesegment length="0" name="shape2.dragpoint1.lineseg2" orient="vertical" x="274.0" y="111.0"/>
+              <linesegment length="79" name="shape2.dragpoint1.lineseg3" orient="horizontal" x="274.0" y="111.0"/>
+              <linesegment length="0" name="shape2.dragpoint1.lineseg4" orient="vertical" x="353.0" y="111.0"/>
+              <linesegment length="63" name="shape2.dragpoint1.lineseg5" orient="horizontal" x="353.0" y="111.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="returndocuments_icon" name="shape3" shapetype="returndocuments" userlabel="" x="432.0" y="96.0">
+          <configuration>
+            <returndocuments label=""/>
+          </configuration>
+          <dragpoints/>
+        </shape>
+      </shapes>
+    </process>
+  </bns:object>
+  <bns:processOverrides/>
+</bns:Component>

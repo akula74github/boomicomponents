@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/#Process_Library" componentId="8a4a3ba7-b8d1-4374-8139-dcddebf59bd4" version="6" name="WSS Atom Heartbeat" type="process" createdDate="2022-01-20T18:09:45Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2022-02-09T00:21:36Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="#Process_Library" folderId="RjoyODc1OTc0">
+  <bns:encryptedValues/>
+  <bns:description>Operational monitoring process to verify web services server process invocation. Exposes a GET service to return a simple text response containing execution context values.
+Testing it for Deploy Packages Job</bns:description>
+  <bns:object>
+    <process xmlns="" allowSimultaneous="true" enableUserLog="false" processLogOnErrorOnly="false" purgeDataImmediately="false" updateRunDates="false" workload="general">
+      <shapes>
+        <shape image="start" name="shape1" shapetype="start" userlabel="" x="48.0" y="96.0">
+          <configuration>
+            <connectoraction actionType="Listen" allowDynamicCredentials="NONE" connectorType="wss" hideSettings="true" operationId="bdc4e83c-c43f-4e77-9277-5488d0a3bb6d">
+              <parameters/>
+              <dynamicProperties/>
+            </connectoraction>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape4" x="208.0" y="105.0">
+              <linesegment length="0" name="shape1.dragpoint1.lineseg1" orient="horizontal" x="82.0" y="111.0"/>
+              <linesegment length="0" name="shape1.dragpoint1.lineseg2" orient="vertical" x="82.0" y="111.0"/>
+              <linesegment length="71" name="shape1.dragpoint1.lineseg3" orient="horizontal" x="82.0" y="111.0"/>
+              <linesegment length="0" name="shape1.dragpoint1.lineseg4" orient="vertical" x="153.0" y="111.0"/>
+              <linesegment length="55" name="shape1.dragpoint1.lineseg5" orient="horizontal" x="153.0" y="111.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="returndocuments_icon" name="shape2" shapetype="returndocuments" userlabel="" x="592.0" y="96.0">
+          <configuration>
+            <returndocuments label=""/>
+          </configuration>
+          <dragpoints/>
+        </shape>
+        <shape image="processcall_icon" name="shape4" shapetype="processcall" userlabel="" x="224.0" y="96.0">
+          <configuration>
+            <processcall abort="true" processId="ba337368-5f5d-4251-a37e-6bc39d678471" wait="true">
+              <parameters/>
+              <returnpaths>
+                <returnpaths childShapeName="shape3" returnLabel=""/>
+              </returnpaths>
+            </processcall>
+          </configuration>
+          <dragpoints>
+            <dragpoint identifier="shape3" name="shape4.dragpoint1" toShape="shape5" x="432.0" y="105.0">
+              <linesegment length="0" name="shape4.dragpoint1.lineseg1" orient="horizontal" x="258.0" y="111.0"/>
+              <linesegment length="0" name="shape4.dragpoint1.lineseg2" orient="vertical" x="258.0" y="111.0"/>
+              <linesegment length="95" name="shape4.dragpoint1.lineseg3" orient="horizontal" x="258.0" y="111.0"/>
+              <linesegment length="0" name="shape4.dragpoint1.lineseg4" orient="vertical" x="353.0" y="111.0"/>
+              <linesegment length="79" name="shape4.dragpoint1.lineseg5" orient="horizontal" x="353.0" y="111.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape image="message_icon" name="shape5" shapetype="message" userlabel="Output Context Props" x="448.0" y="96.0">
+          <configuration>
+            <message combined="false">
+              <msgTxt>Greetings from your Atom Web Server!
+
+inuser={1}
+inpath={2}
+inmethod={3}
+ProcessName={4}
+ExecutionID={5}
+AtomID={6}</msgTxt>
+              <msgParameters>
+                <parametervalue key="4" valueType="process">
+                  <processparameter processproperty="inuser" processpropertydefaultvalue=""/>
+                </parametervalue>
+                <parametervalue key="5" valueType="process">
+                  <processparameter processproperty="inpath" processpropertydefaultvalue=""/>
+                </parametervalue>
+                <parametervalue key="6" valueType="process">
+                  <processparameter processproperty="inmethod" processpropertydefaultvalue=""/>
+                </parametervalue>
+                <parametervalue key="0" valueType="process">
+                  <processparameter processproperty="BOOMI_PROCESS_NAME" processpropertydefaultvalue=""/>
+                </parametervalue>
+                <parametervalue key="1" valueType="process">
+                  <processparameter processproperty="BOOMI_EXECUTION_ID" processpropertydefaultvalue=""/>
+                </parametervalue>
+                <parametervalue key="2" valueType="process">
+                  <processparameter processproperty="BOOMI_ATOM_ID" processpropertydefaultvalue=""/>
+                </parametervalue>
+              </msgParameters>
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape5.dragpoint1" toShape="shape2" x="576.0" y="105.0">
+              <linesegment length="0" name="shape5.dragpoint1.lineseg1" orient="horizontal" x="482.0" y="111.0"/>
+              <linesegment length="0" name="shape5.dragpoint1.lineseg2" orient="vertical" x="482.0" y="111.0"/>
+              <linesegment length="55" name="shape5.dragpoint1.lineseg3" orient="horizontal" x="482.0" y="111.0"/>
+              <linesegment length="0" name="shape5.dragpoint1.lineseg4" orient="vertical" x="537.0" y="111.0"/>
+              <linesegment length="39" name="shape5.dragpoint1.lineseg5" orient="horizontal" x="537.0" y="111.0"/>
+            </dragpoint>
+          </dragpoints>
+        </shape>
+      </shapes>
+    </process>
+  </bns:object>
+  <bns:processOverrides/>
+</bns:Component>

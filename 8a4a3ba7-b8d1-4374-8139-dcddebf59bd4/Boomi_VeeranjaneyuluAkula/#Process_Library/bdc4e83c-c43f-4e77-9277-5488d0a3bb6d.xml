@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Boomi_VeeranjaneyuluAkula/#Process_Library" componentId="bdc4e83c-c43f-4e77-9277-5488d0a3bb6d" version="2" name="getAtomHeartbeat" type="connector-action" subType="wss" createdDate="2022-01-20T18:09:46Z" createdBy="veeranjaneyulu_akula@dell.com" modifiedDate="2022-01-20T19:25:50Z" modifiedBy="veeranjaneyulu_akula@dell.com" deleted="false" currentVersion="true" folderName="#Process_Library" folderId="RjoyODc1OTc0">
+  <bns:encryptedValues/>
+  <bns:description/>
+  <bns:object>
+    <Operation xmlns="">
+      <Archiving directory="" enabled="false"/>
+      <Configuration>
+        <WebServicesServerListenAction inputType="none" objectName="atomHealth" operationType="GET" outputType="singledata" responseContentType="text/plain"/>
+      </Configuration>
+      <Tracking>
+        <TrackedFields/>
+      </Tracking>
+      <Caching/>
+    </Operation>
+  </bns:object>
+</bns:Component>
